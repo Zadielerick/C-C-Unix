@@ -1,6 +1,6 @@
 //HelloWorld.cpp
 //Author: Erick Narvaez
-#include <stdio.h>
+#include <iostream>
 
 int main() {
   std::cout << "Hello World!";
