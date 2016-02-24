@@ -22,9 +22,11 @@ private:
 public:
 	Hexagon(double sideLength);
 	void calcArea();
-	void setWholeSize();
 	void calcSliceArea();
-	void setSliceSize();
+	void setWholeSize(Size size);
+	void setSliceSize(Size size);
+	double getArea();
+	double getSliceArea();
 	std::string toString();
 	std::string size_Name(int size);
 };

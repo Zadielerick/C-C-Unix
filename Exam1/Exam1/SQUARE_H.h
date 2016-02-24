@@ -22,9 +22,11 @@ private:
 public:
 	Square(double length);
 	void calcArea();
-	void setWholeSize();
+	void setWholeSize(Size size);
+	void setSliceSize(Size size);
 	void calcSliceArea();
-	void setSliceSize();
+	double getArea();
+	double getSliceArea();
 	std::string toString();
 	std::string size_Name(int size);
 };

@@ -8,6 +8,8 @@
 //	5) calcSliceArea(): Takes the whole area and calculates the slice area
 //	6) toString(): Returns the properties of Square in a formatted string
 //	7) size_Name(): Converts Size enum to string name
+//	8) getArea(): Returns the area of the object
+//	9) getSliceArea(): Returns the slice area of the object
 
 #include "stdafx.h"
 #include "SQUARE_H.h"
@@ -21,10 +23,12 @@
 //				1) double length (input). The side length of the square object. 
 Square::Square(double length) {
 	sideLength = length;
+	whole = MEDIUM;
+	slice = MEDIUM;
 	calcArea();
 	calcSliceArea();
-	setWholeSize();
-	setSliceSize();
+	//setWholeSize();
+	//setSliceSize();
 }
 
 // Name:		calcArea()
@@ -40,13 +44,14 @@ void Square::calcArea() {
 // Summary:		Determines what size the pizza falls under. Assumes that a small pizza has an area less than 36 inches^2, 
 //				a medium has between 36 and 144, and a large has 144 or more.
 // Arguments:	(none)
-void Square::setWholeSize() {
-	if (area <= 36)
+void Square::setWholeSize(Size size) {
+	whole = size;
+	/*if (area <= 36)
 		whole = SMALL;
 	else if (area >= 144)
 		whole = LARGE;
 	else
-		whole = MEDIUM;
+		whole = MEDIUM;*/
 }
 
 // Name:		setSliceSize()
@@ -54,13 +59,14 @@ void Square::setWholeSize() {
 // Summary:		Determines what size the slice of the pizza falls under. Assumes that a small slice of pizza has an area less than 4 inches^2, 
 //				a medium has between 4 and 16, and a large has 16 or more.
 // Arguments:	(none)
-void Square::setSliceSize() {
-	if (sliceArea <= 4)
+void Square::setSliceSize(Size size) {
+	slice = size;
+	/*if (sliceArea <= 4)
 		slice = SMALL;
 	else if (sliceArea >= 16)
 		slice = LARGE;
 	else
-		slice = MEDIUM;
+		slice = MEDIUM;*/
 }
 
 // Name:		calcSliceArea()
@@ -96,4 +102,20 @@ std::string Square::size_Name(int size) {
 	case(2) : return "Large";
 	default: return "not a size";
 	}
+}
+
+// Name:		getArea()
+// Author:		Erick Narvaez
+// Summary:		Getter method for the area of the object. Returns a double.
+// Arguments:	(none)
+double Square::getArea() {
+	return area;
+}
+
+// Name:		getArea()
+// Author:		Erick Narvaez
+// Summary:		Getter method for the slice area of the object. Returns a double.
+// Arguments:	(none)
+double Square::getSliceArea() {
+	return sliceArea;
 }

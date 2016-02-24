@@ -21,10 +21,12 @@ private:
 
 public:
 	Circle(double sideLength);
+	double getArea();
+	double getSliceArea();
+	void setWholeSize(Size size);
+	void setSliceSize(Size size);
 	void calcArea();
-	void setWholeSize();
 	void calcSliceArea();
-	void setSliceSize();
 	std::string toString();
 	std::string size_Name(int size);
 };

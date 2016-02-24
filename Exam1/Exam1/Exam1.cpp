@@ -41,6 +41,71 @@ int main()
 	Circle Circle1 = Circle(circleDiameter);
 	Hexagon Hexagon1 = Hexagon(hexagonalLength);
 
+	//Compare the areas of the whole between each of the 3 classes
+	//TODO: Figure out how to compare whole sizes and slice sizes!!
+	if (Square1.getArea() < Circle1.getArea()) {
+		if (Square1.getArea() < Hexagon1.getArea()) {
+			Square1.setWholeSize(SMALL);
+			if (Hexagon1.getArea() < Circle1.getArea()) {
+				Circle1.setWholeSize(LARGE);
+			}
+			else {
+				Hexagon1.setWholeSize(LARGE);
+			}
+		}
+		else {
+			Hexagon1.setWholeSize(SMALL);
+			Circle1.setWholeSize(LARGE);
+		}
+	}
+	else {
+		if (Circle1.getArea() < Hexagon1.getArea()) {
+			Circle1.setWholeSize(SMALL);
+			if (Hexagon1.getArea() < Square1.getArea()) {
+				Square1.setWholeSize(LARGE);
+			}
+			else {
+				Hexagon1.setWholeSize(LARGE);
+			}
+		}
+		else {
+			Hexagon1.setWholeSize(SMALL);
+			Square1.setWholeSize(LARGE);
+		}
+	}
+
+	//Compare the areas of the slices between each of the 3 classes
+
+	if (Square1.getSliceArea() < Circle1.getSliceArea()) {
+		if (Square1.getSliceArea() < Hexagon1.getSliceArea()) {
+			Square1.setSliceSize(SMALL);
+			if (Hexagon1.getSliceArea() < Circle1.getSliceArea()) {
+				Circle1.setSliceSize(LARGE);
+			}
+			else {
+				Hexagon1.setSliceSize(LARGE);
+			}
+		}
+		else {
+			Hexagon1.setSliceSize(SMALL);
+			Circle1.setSliceSize(LARGE);
+		}
+	}
+	else {
+		if (Circle1.getSliceArea() < Hexagon1.getSliceArea()) {
+			Circle1.setSliceSize(SMALL);
+			if (Hexagon1.getSliceArea() < Square1.getSliceArea()) {
+				Square1.setSliceSize(LARGE);
+			}
+			else {
+				Hexagon1.setSliceSize(LARGE);
+			}
+		}
+		else {
+			Hexagon1.setSliceSize(SMALL);
+			Square1.setSliceSize(LARGE);
+		}
+	}
 	//Output toString methods of each object to the console
 	cout << Square1.toString() << "\n" << Circle1.toString() << "\n" << Hexagon1.toString();
 
