@@ -11,7 +11,7 @@
 //	8) getArea(): Returns the area of the object
 //	9) getSliceArea(): Returns the slice area of the object
 
-#include "stdafx.h"
+
 #include "HEXAGON_H.h"
 #include <iostream>
 #include <math.h>

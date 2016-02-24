@@ -3,7 +3,7 @@
 // Classes/Procedures:
 //	int main(): Main method; requests user input for shape dimensions and writes specifications to "comparisons.prn".
 
-#include "stdafx.h"
+
 #include <iostream>
 #include <fstream>
 #include "SQUARE_H.h"

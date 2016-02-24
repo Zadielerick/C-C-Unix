@@ -11,7 +11,7 @@
 //	8) getArea(): Returns the area of the object
 //	9) getSliceArea(): Returns the slice area of the object
 
-#include "stdafx.h"
+
 #include "SQUARE_H.h"
 #include <iostream>
 
